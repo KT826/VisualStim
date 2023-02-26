@@ -11,7 +11,7 @@ try
    %daq.getVendors
    device = daq.getDevices;
    
-   %nVoke Rec trigger 
+   %Rec trigger 
    do.TTL.nVoke_Ex = daq.createSession('ni');
    addDigitalChannel(do.TTL.nVoke_Ex,device.ID, 'port0/line0:2', 'OutputOnly');
    outputSingleScan(do.TTL.nVoke_Ex,[0,0,0]) % reset TTL
